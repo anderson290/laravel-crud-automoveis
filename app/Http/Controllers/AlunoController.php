@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Aluno;
+use App\Cliente;
 use Illuminate\Http\Request;
 
-class AlunoController extends Controller
+class ClienteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class AlunoController extends Controller
      */
     public function index()
     {
-        // Obtem todos os alunos cadastrados e os passa para view
-        $alunos = Aluno::all();
-        return view('aluno.index')->with('alunos',$alunos);
+        // Obtem todos os Clientes cadastrados e os passa para view
+        $Clientes = Cliente::all();
+        return view('Cliente.index')->with('Clientes',$Clientes);
     }
 
     /**
@@ -26,7 +26,7 @@ class AlunoController extends Controller
      */
     public function create()
     {
-        return view ('aluno.create');
+        return view ('Cliente.create');
     }
 
     /**
@@ -37,17 +37,17 @@ class AlunoController extends Controller
      */
     public function store(Request $request)
     {
-        Aluno::create($request->all());
-        return redirect('aluno');
+        Cliente::create($request->all());
+        return redirect('Cliente');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Aluno  $aluno
+     * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function show(Aluno $aluno)
+    public function show(Cliente $cliente)
     {
         //
     }
@@ -55,34 +55,34 @@ class AlunoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Aluno  $aluno
+     * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function edit(Aluno $aluno)
+    public function edit(Cliente $cliente)
     {
-        return view('aluno.edit')->with('aluno',$aluno);
+        return view('cliente.edit')->with('cliente',$cliente);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Aluno  $aluno
+     * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Aluno $aluno)
+    public function update(Request $request, Cliente $cliente)
     {
-        $aluno->update($request->all());
-        return redirect('aluno'); 
+        $cliente->update($request->all());
+        return redirect('Cliente'); 
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Aluno  $aluno
+     * @param  \App\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Aluno $aluno)
+    public function destroy(Cliente $cliente)
     {
         //
     }
