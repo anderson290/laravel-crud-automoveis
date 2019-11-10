@@ -20,7 +20,6 @@ class CreatePecaAutomovelsTable extends Migration
             $table->integer('automovel_id')->unsigned;
             $table->foreign('peca_id')->references('id')->on('pecas');
             $table->foreign('automovel_id')->references('id')->on('automovels');
-            
          });
     }
 

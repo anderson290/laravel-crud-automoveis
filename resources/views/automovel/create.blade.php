@@ -32,7 +32,6 @@
     <dt>Data de Fabricação</dt>
   	<dd><input type="date" class="form-control"  name="dt_fabricacao"></dd>
     </div>
-    
   </dl>
   <input type="submit" class="btn btn-primary" value="Enviar">
   </form>
