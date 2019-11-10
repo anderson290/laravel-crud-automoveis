@@ -20,7 +20,7 @@ class CreateClientesTable extends Migration
             $table->string('endereco',100);
             $table->string('email')->unique();
             $table->string('cpf',11)->unique();
-            $table->string('telefones',15);
+            $table->string('telefone',15);
         });
     }
 

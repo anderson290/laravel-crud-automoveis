@@ -1,5 +1,4 @@
-﻿@extends('cliente.create')
-@extends('layouts.app')
+﻿@extends('layouts.app')
 @section('content')
 
 
