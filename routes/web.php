@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('aluno','AlunoController');
-Route::resource('professor','ProfessorController');
+Route::resource('vliente','ClienteController');
+Route::resource('vendedor','VendedorController');
 Route::resource('automovel','AutomovelController');
 
 Auth::routes();

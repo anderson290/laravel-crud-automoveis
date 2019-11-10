@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Professor;
+use App\Vendedor;
 use Illuminate\Http\Request;
 
-class ProfessorController extends Controller
+class VendedorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class ProfessorController extends Controller
      */
     public function index()
     {
-        $professores = Professor::all();
-        return view('professor.index')->with('professores',$professores);
+        $vendedores = Vendedor::all();
+        return view('vendedor.index')->with('vendedores',$vendedores);
     }
 
 
@@ -26,7 +26,7 @@ class ProfessorController extends Controller
      */
     public function create()
     {
-        return view('professor.create');
+        return view('vendedor.create');
     }
 
     /**
@@ -37,17 +37,17 @@ class ProfessorController extends Controller
      */
     public function store(Request $request)
     {
-        Professor::create($request->all());
-        return redirect('professor');
+        Vendedor::create($request->all());
+        return redirect('vendedor');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Professor  $professor
+     * @param  \App\Vendedor  $vendedor
      * @return \Illuminate\Http\Response
      */
-    public function show(Professor $professor)
+    public function show(Vendedor $vendedor)
     {
         //
     }
@@ -55,36 +55,36 @@ class ProfessorController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Professor  $professor
+     * @param  \App\Vendedor  $vendedor
      * @return \Illuminate\Http\Response
      */
-    public function edit(Professor $professor)
+    public function edit(Vendedor $vendedor)
     {
         //
-        return view('professor.edit')->with('professor',$professor);
+        return view('vendedor.edit')->with('vendedor',$vendedor);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Professor  $professor
+     * @param  \App\Vendedor  $vendedor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Professor $professor)
+    public function update(Request $request, Vendedor $vendedor)
     {
         //
-        $professor->update($request->all());
-        return redirect('professor');
+        $vendedor->update($request->all());
+        return redirect('vendedor');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Professor  $professor
+     * @param  \App\Vendedor  $vendedor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Professor $professor)
+    public function destroy(Vendedor $vendedor)
     {
         //
     }

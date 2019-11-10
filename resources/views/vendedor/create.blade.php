@@ -1,13 +1,13 @@
 @extends('master')
-@section('titulo','Novo Aluno')
+@section('titulo','Novo Vendedor')
 @section('conteudo')
-  <form method="post" action="/aluno">
+  <form method="post" action="/vendedor">
   @csrf
   <dl>
   	<dt>Nome</dt>
   	<dd><input type="text" name="nome"></dd>
-  	<dt>Endereco</dt>
-  	<dd><input type="text" name="endereco"></dd>
+  	<dt>Materia</dt>
+  	<dd><input type="text" name="materia"></dd>
   </dl>
   <input type="submit" value="Enviar">
   </form>
