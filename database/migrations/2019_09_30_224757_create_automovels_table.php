@@ -16,6 +16,7 @@ class CreateAutomovelsTable extends Migration
         Schema::create('automovels', function (Blueprint $table) {
            $table->increments('id');
            // $table->timestamps();
+           $table->string('nome',100);
            $table->string('marca',100);
            $table->string('modelo',100);
            $table->string('placa', 8)->unique();

@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::resource('cliente','ClienteController');
 Route::resource('vendedor','VendedorController');
 Route::resource('automovel','AutomovelController');
+Route::resource('peca','PecaController');
 
 Auth::routes();
 

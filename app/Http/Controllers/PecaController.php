@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Cliente;
+use App\Peca;
 use Illuminate\Http\Request;
 
-class ClienteController extends Controller
+class PecaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        // Obtem todos os Clientes cadastrados e os passa para view
-        $Clientes = Cliente::all();
-        return view('Cliente.index')->with('Clientes',$Clientes);
+        // Obtem todos os Pecas cadastrados e os passa para view
+        $pecas = Peca::all();
+        return view('peca.index')->with('peca',$pecas);
     }
 
     /**
@@ -26,7 +26,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view ('cliente.create');
+        return view ('peca.create');
     }
 
     /**
@@ -37,17 +37,17 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        Cliente::create($request->all());
-        return redirect('Cliente');
+        Peca::create($request->all());
+        return redirect('peca');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Cliente  $cliente
+     * @param  \App\Peca  $Peca
      * @return \Illuminate\Http\Response
      */
-    public function show(Cliente $cliente)
+    public function show(Peca $peca)
     {
         //
     }
@@ -55,34 +55,34 @@ class ClienteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Cliente  $cliente
+     * @param  \App\Peca  $Peca
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cliente $cliente)
+    public function edit(Peca $peca)
     {
-        return view('cliente.edit')->with('cliente',$cliente);
+        return view('peca.edit')->with('peca',$peca);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Cliente  $cliente
+     * @param  \App\Peca  $Peca
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cliente $cliente)
+    public function update(Request $request, Peca $peca)
     {
-        $cliente->update($request->all());
-        return redirect('Cliente'); 
+        $peca->update($request->all());
+        return redirect('peca'); 
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Cliente  $cliente
+     * @param  \App\Peca  $Peca
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cliente $cliente)
+    public function destroy(Peca $peca)
     {
         //
     }
