@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Cliente;
+use App\Peca_automovel;
 use Illuminate\Http\Request;
 
-class ClienteController extends Controller
+class PecaAutomovelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        // Obtem todos os Clientes cadastrados e os passa para view
-        $Clientes = Cliente::all();
-        return view('Cliente.index')->with('Clientes',$Clientes);
+        //
     }
 
     /**
@@ -26,7 +24,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view ('Cliente.create');
+        //
     }
 
     /**
@@ -37,17 +35,16 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        Cliente::create($request->all());
-        return redirect('Cliente');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Cliente  $cliente
+     * @param  \App\Peca_automovel  $peca_automovel
      * @return \Illuminate\Http\Response
      */
-    public function show(Cliente $cliente)
+    public function show(Peca_automovel $peca_automovel)
     {
         //
     }
@@ -55,34 +52,33 @@ class ClienteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Cliente  $cliente
+     * @param  \App\Peca_automovel  $peca_automovel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cliente $cliente)
+    public function edit(Peca_automovel $peca_automovel)
     {
-        return view('cliente.edit')->with('cliente',$cliente);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Cliente  $cliente
+     * @param  \App\Peca_automovel  $peca_automovel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cliente $cliente)
+    public function update(Request $request, Peca_automovel $peca_automovel)
     {
-        $cliente->update($request->all());
-        return redirect('Cliente'); 
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Cliente  $cliente
+     * @param  \App\Peca_automovel  $peca_automovel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cliente $cliente)
+    public function destroy(Peca_automovel $peca_automovel)
     {
         //
     }
