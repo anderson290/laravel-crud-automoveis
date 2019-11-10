@@ -19,6 +19,25 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+        footer{
+            background: black;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .git{
+            width: 4em;
+            margin: 1em;
+        }
+
+        .center-obj{
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -79,6 +98,16 @@
     </div>
 </body>
 <footer>
-    esse é o footer
+
+        <div class="center-obj ">
+            <img class="git" src="https://image.flaticon.com/icons/svg/733/733553.svg" alt="">
+        </div>
+
+    <h5>Desenvolvido por:</h5>
+
+    <div class="">
+        <a href="https://github.com/anderson290">Anderson Nunes</a> | 
+        <a href="https://github.com/weslleyantonio">Weslley Antônio</a>
+    </div>
 </footer>
 </html>

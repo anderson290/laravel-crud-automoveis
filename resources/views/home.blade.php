@@ -32,20 +32,31 @@
 
 <div class="container">
 
-<section class="row mt-4">
+<section class="row mt-4" style="margin: 5em 0em">
     <div class="col-4" style="margin: 0 auto; text-align: center">
         <img src="https://image.flaticon.com/icons/svg/149/149319.svg" class="w-25 mb-2"alt="">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam dolorum ad asperiores dolores tempora officiis, ut reprehenderit sed ipsa ipsam reiciendis labore est repudiandae consequuntur a aperiam! Quidem, dignissimos!</p>
     </div>
     <div class="col-4" style="margin: 0 auto; text-align: center">
-        <img src="https://image.flaticon.com/icons/svg/149/149319.svg" class="w-25 mb-2" alt="">
+        <img src="https://image.flaticon.com/icons/svg/1098/1098420.svg" class="w-25 mb-2" alt="">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam dolorum ad asperiores dolores tempora officiis, ut reprehenderit sed ipsa ipsam reiciendis labore est repudiandae consequuntur a aperiam! Quidem, dignissimos!</p>
 
     </div>
     <div class="col-4" style="margin: 0 auto; text-align: center">
-        <img src="https://image.flaticon.com/icons/svg/149/149319.svg" class="w-25 mb-2" alt="">
+        <img src="https://image.flaticon.com/icons/svg/1098/1098418.svg" class="w-25 mb-2" alt="">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quibusdam dolorum ad asperiores dolores tempora officiis, ut reprehenderit sed ipsa ipsam reiciendis labore est repudiandae consequuntur a aperiam! Quidem, dignissimos!</p>
 
+    </div>
+</section>
+
+<section class="row mt-4" style="margin: 2em 0em">
+    <div class="col-6">
+        <img class="w-100" src="https://pederneirascomerciodepecas.com.br/wp-content/uploads/2018/09/default-pecas.png" alt="">
+    </div>
+    <div class="col-6">
+    <h1>Peças</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis, nesciunt architecto autem ipsam nesciunt architecto autem ipsam  nesciunt architecto autem ipsam expedita sunt quos, molestias sint dolorem optio, commodi hic ut enim eveniet cum atque earum alias!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis, nesciunt architecto autem ipsam nesciunt architecto autem ipsam  nesciunt architecto autem ipsam expedita sunt quos, molestias sint dolorem optio, commodi hic ut enim eveniet cum atque earum alias!</p>
     </div>
 </section>
 </div>
