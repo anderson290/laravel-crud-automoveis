@@ -16,6 +16,10 @@
   
   <dl class="row">
   <div class="col-12">
+  	<dt>Nome</dt>
+  	<dd><input type="text" class="form-control" name="nome" value="{{$automovel->nome}}"></dd>
+    </div>
+  <div class="col-12">
   	<dt>Marca</dt>
   	<dd><input type="text" class="form-control" name="marca"  value="{{$automovel->marca}}"></dd>
     </div>
@@ -37,6 +41,7 @@
     </div>
     
   </dl>
+  <a href="/automovel" class="btn">Voltar</a>
   <input type="submit" class="btn btn-primary" value="Atualizar">
   </form>
   </div>

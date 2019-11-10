@@ -16,7 +16,7 @@ class ClienteController extends Controller
     {
         // Obtem todos os Clientes cadastrados e os passa para view
         $Clientes = Cliente::all();
-        return view('Cliente.index')->with('Clientes',$Clientes);
+        return view('cliente.index')->with('clientes',$Clientes);
     }
 
     /**
@@ -38,7 +38,7 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         Cliente::create($request->all());
-        return redirect('Cliente');
+        return redirect('cliente');
     }
 
     /**
@@ -73,7 +73,7 @@ class ClienteController extends Controller
     public function update(Request $request, Cliente $cliente)
     {
         $cliente->update($request->all());
-        return redirect('Cliente'); 
+        return redirect('cliente'); 
     }
 
     /**

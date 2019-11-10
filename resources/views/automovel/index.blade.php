@@ -1,11 +1,14 @@
 @extends('master')
 @section('titulo','Automoveis')
 @section('conteudo')
+<a href="/home" class="btn float-right">Home</a>
 <div class="container">
+
   <h1 class="text-center display-4"><a href="/automovel/create">Novo Automóvel</a></h1>
   <table class="table">
   <thead>
     <tr>
+      <th scope="col">Nome</th>
       <th scope="col">Marca</th>
       <th scope="col">Modelo</th>
       <th scope="col">Placa</th>
@@ -20,6 +23,7 @@
   
     @foreach($automoveis as $a)
     <tr> 
+      <td>{{$a->nome}}</td>
       <td>{{$a->marca}}</td>
       <td>{{$a->modelo}}</td>
       <td>{{$a->placa}}</td>

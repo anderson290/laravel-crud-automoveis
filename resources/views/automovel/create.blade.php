@@ -13,6 +13,10 @@
   @csrf
   <dl class="row">
   <div class="col-12">
+  	<dt>Nome</dt>
+  	<dd><input type="text" class="form-control" name="nome"></dd>
+    </div>
+  <div class="col-12">
   	<dt>Marca</dt>
   	<dd><input type="text" class="form-control" name="marca"></dd>
     </div>
@@ -33,6 +37,8 @@
   	<dd><input type="date" class="form-control"  name="dt_fabricacao"></dd>
     </div>
   </dl>
+  <a href="/automovel" class="btn">Voltar</a>
   <input type="submit" class="btn btn-primary" value="Enviar">
+
   </form>
 @endsection

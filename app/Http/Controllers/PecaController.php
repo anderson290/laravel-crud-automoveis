@@ -16,7 +16,7 @@ class PecaController extends Controller
     {
         // Obtem todos os Pecas cadastrados e os passa para view
         $pecas = Peca::all();
-        return view('peca.index')->with('peca',$pecas);
+        return view('peca.index')->with('pecas',$pecas);
     }
 
     /**
