@@ -9,10 +9,6 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="https://lscautomoveis.pt/wp-content/uploads/2015/12/airbag-on-off-1000x300.jpg" alt="First slide">
-    </div>
-    
     <div class="carousel-item">
       <img class="d-block w-100" src="https://s3.amazonaws.com/afb-media/wp-content/uploads/2019/03/11121704/Laptop_hero-1000x300.jpg" alt="Second slide">
     </div>

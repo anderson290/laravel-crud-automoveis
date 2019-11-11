@@ -19,7 +19,7 @@ class CreatePecasTable extends Migration
             $table->string('nome',100);
             $table->string('marca',100);
             $table->string('modelo',100);
-            $table->string('descricao', 100);
+            $table->text('descricao', 100);
             $table->string('cd_peca', 100);
             $table->double('preco');
             $table->date('dt_fabricacao');
