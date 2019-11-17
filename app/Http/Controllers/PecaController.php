@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Peca;
+use App\Automovel;
 use Illuminate\Http\Request;
 
 class PecaController extends Controller
@@ -26,7 +27,9 @@ class PecaController extends Controller
      */
     public function create()
     {
-        return view ('peca.create');
+        $automovel = Automovel::all();
+
+        return view ('peca.create', ['automovel' => $automovel]);
     }
 
     /**
@@ -59,8 +62,10 @@ class PecaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Peca $peca)
-    {
-        return view('peca.edit')->with('peca',$peca);
+    {        
+        $automovel = Automovel::all();
+
+        return view('peca.edit', ['automovel' => $automovel])->with('peca',$peca);
     }
 
     /**

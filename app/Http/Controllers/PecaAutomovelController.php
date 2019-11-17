@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Peca;
+use App\Automovel;
 use App\Peca_automovel;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class PecaAutomovelController extends Controller
      */
     public function index()
     {
-        //
+        $peca_automovels = JogadorJogos::all();
+        return view('pecaAutomovels.index')->with('pecaAutomovels', $peca_automovels);
     }
 
     /**
@@ -24,7 +26,9 @@ class PecaAutomovelController extends Controller
      */
     public function create()
     {
-        //
+        $pecas = Peca::all();
+        $automovels = Automovel::all();
+        return view ('pecaAutomovels.create', ['pecas' => $pecas, 'automovels' => $automovels]);
     }
 
     /**
@@ -35,7 +39,10 @@ class PecaAutomovelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $peca = Peca::find($request->all()['peca_id']);
+        $automovel = Automovel::find($request->all()['automovel_id']);
+        $automovel->pecas()->attach($peca);
+        return redirect('peca-automovel');
     }
 
     /**
@@ -57,7 +64,9 @@ class PecaAutomovelController extends Controller
      */
     public function edit(Peca_automovel $peca_automovel)
     {
-        //
+        $pecas = Peca::all();
+        $automovels = Automovel::all();
+        return view('peca-automovel.edit', ['pecas' => $pecas, 'automovels' => $automovels]);
     }
 
     /**
@@ -69,7 +78,8 @@ class PecaAutomovelController extends Controller
      */
     public function update(Request $request, Peca_automovel $peca_automovel)
     {
-        //
+        $peca_automovel->update($request->all());
+        return redirect('peca-automovel');
     }
 
     /**
